@@ -21,7 +21,6 @@ public partial class BookStoreDbContext : DbContext
     {
         modelBuilder.Entity<Author>(entity =>
         {
-            entity.Property(e => e.Id).ValueGeneratedNever();
             entity.Property(e => e.Bio).HasMaxLength(250);
             entity.Property(e => e.FirstName).HasMaxLength(50);
             entity.Property(e => e.LastName).HasMaxLength(50);
@@ -29,9 +28,9 @@ public partial class BookStoreDbContext : DbContext
 
         modelBuilder.Entity<Book>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Books__3214EC07951B6B8E");
+            entity.HasKey(e => e.Id).HasName("PK__books__3214EC079CC03A47");
 
-            entity.HasIndex(e => e.Isbn, "UQ__Books__447D36EA0562A6D3").IsUnique();
+            entity.HasIndex(e => e.Isbn, "UQ__books__447D36EA89D4BCDA").IsUnique();
 
             entity.Property(e => e.Image).HasMaxLength(50);
             entity.Property(e => e.Isbn)

@@ -7,11 +7,11 @@ public partial class Book
 {
     public int Id { get; set; }
 
+    public string Isbn { get; set; } = null!;
+
     public string? Title { get; set; }
 
     public int? Year { get; set; }
-
-    public string Isbn { get; set; } = null!;
 
     public string? Summary { get; set; }
 
