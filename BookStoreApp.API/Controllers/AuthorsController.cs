@@ -158,13 +158,13 @@ namespace BookStoreApp.API.Controllers
         {
             if (_context.Authors == null)
             {
-                logger.LogWarning($"{Messages.RecordNotFound} - {nameof(GetAuthor)}");
+                logger.LogWarning($"{Messages.RecordNotFound} - {nameof(DeleteAuthor)}");
                 return NotFound();
             }
             var author = await _context.Authors.FindAsync(id);
             if (author == null)
             {
-                logger.LogWarning($"{Messages.RecordNotFound} - {nameof(GetAuthor)}");
+                logger.LogWarning($"{Messages.RecordNotFound} - {nameof(DeleteAuthor)}");
                 return NotFound();
             }
 
