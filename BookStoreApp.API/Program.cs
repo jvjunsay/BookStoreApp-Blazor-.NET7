@@ -28,7 +28,7 @@ builder.Host.UseSerilog((ctx, lc) =>
 
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("Allow All", b => b.AllowAnyMethod().AllowAnyHeader().AllowAnyOrigin());
+    options.AddPolicy("AllowAll", b => b.AllowAnyMethod().AllowAnyHeader().AllowAnyOrigin());
 });
 
 builder.Services.AddAuthentication(options =>
